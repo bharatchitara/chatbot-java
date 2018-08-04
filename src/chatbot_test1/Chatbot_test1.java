@@ -8,6 +8,7 @@
 package chatbot_test1;
 //import chatbot_test1.Secondinput.*;
 //import chatbot_test1.thirdoption.*;
+//import chatbot_test1.Database.*;
 
 import java.awt.Desktop;
 import java.awt.FlowLayout;
@@ -16,6 +17,7 @@ import javax.swing.JOptionPane;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.*;
+import java.sql.*;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -31,7 +33,7 @@ interface Inputs{
     void choice2();
     void choice3();
     void choice4();
-    void choice5();
+ //   void choice5();
     void choice6();
    //void choice7();
   //void secondinput();
@@ -169,7 +171,7 @@ public void welcome(){
    System.out.println("\t\t\t\t\t\t project version 1.0.1.0");
      
    }
-   
+   /*
    public void choice5(){
    
    System.out.println("\t\t\t\t\t\t 5 star : excellent");
@@ -188,7 +190,7 @@ public void welcome(){
    
   System.out.println("\t\t\t\t\t\t your responce was submitted...Thank You");
    }
-   
+   */
    
    public void choice6(){
    System.out.println("\t\t\t\t\t\t info about previous versions & inprovements ");
@@ -205,11 +207,11 @@ public void welcome(){
 }
 
  class Image  {
-     
+		
     void show() throws IOException{                                                 
         /*the image will not be shown untill you change the path acc. to your pc  */
+    	BufferedImage img = ImageIO.read(new File("D:\\netbeans\\chatbot_test1\\src\\chatbot_test1\\download.png"));        //the image source atteched with the code 
         
-        BufferedImage img = ImageIO.read(new File("D:\\netbeans\\chatbot_test1\\src\\chatbot_test1\\download.png"));        //the image source atteched with the code 
         ImageIcon icon=new ImageIcon(img);
         JFrame frame=new JFrame();
         frame.setLayout(new FlowLayout());
@@ -231,7 +233,8 @@ public class Chatbot_test1 {
    Scanner sc = new Scanner(System.in);
    // Inputs obj = new Inputs();                                                        //class objects
     Inputs obj = new Feathers();
-    Feathers obj1 = new Feathers();
+    chatbot_test1.Database dbget = new chatbot_test1.Database();
+     Feathers obj1 = new Feathers();
     Image obj2 =new Image();
     
     obj.welcome();                                                                         
@@ -258,7 +261,7 @@ public class Chatbot_test1 {
             case 2 :   obj.choice2();break;
             case 3 :   obj.choice3();break;
             case 4 :   obj.choice4();break;
-            case 5 :   obj.choice5();break;
+            case 5 :   dbget.main(args);break;
             case 6 :   obj.choice6();break;
             //case 7 :   obj.choice7(); break;
             case 0 :      break exitloop;  
