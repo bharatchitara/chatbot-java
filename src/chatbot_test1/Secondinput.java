@@ -3,10 +3,10 @@ package chatbot_test1;
 import java.util.*;
  
 class Secondinput {
-    
+	   Scanner sc =new Scanner (System.in);
+	 
         void secondinput() {
-        Scanner sc =new Scanner (System.in);
-  String name =null;
+         String name =null;
    String movie =null;
    String mtype1="action";
    String mtype2="sci-fi";
