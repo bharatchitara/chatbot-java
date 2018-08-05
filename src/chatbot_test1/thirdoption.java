@@ -27,7 +27,6 @@ class thirdoption {
          System.out.println("don't use numbers & special characters!");
     p_lang= sc.nextLine();
     }
-    
      System.out.println("\t\t\t\t\t\t interest to see some facts about your favorite prog. language ?");
      System.out.println("\t\t\t\t\t\t YES\t\t\tNO");
      String choice= sc.nextLine();                                                                 //input for seeing facts 

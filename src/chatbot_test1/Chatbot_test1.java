@@ -62,7 +62,7 @@ public void welcome(){
     str2= sc.nextLine();
     while(!str2.matches("[a-zA-Z]+"))                                                     //regex are used to stop false inputs.
     {
-    System.out.println("please enter the valid name!");
+    System.out.println("please enter the valid string!");
     str2= sc.nextLine();
     }
    
@@ -72,6 +72,7 @@ public void welcome(){
     catch(InterruptedException e){
     System.out.println(e);
             }
+    
     
     
     if(str2.equals(str1) || str2.equals(str3) || str2.equals(str4) || str2.equals(str5)|| str2.equals(str6)|| str2.equals(str7)|| str2.equals(str8))
@@ -171,26 +172,7 @@ public void welcome(){
    System.out.println("\t\t\t\t\t\t project version 1.0.1.0");
      
    }
-   /*
-   public void choice5(){
    
-   System.out.println("\t\t\t\t\t\t 5 star : excellent");
-   System.out.println("\t\t\t\t\t\t 4 star : great");
-   System.out.println("\t\t\t\t\t\t 3 star : good  ");
-   System.out.println("\t\t\t\t\t\t 2 star : fair");
-   System.out.println("\t\t\t\t\t\t 1 star : poor");
-   System.out.println("\t\t\t\t\t\t enter your responce"); 
-   
-   String response = sc.nextLine();
-   while(!response.matches("[1-5]"))                                                     //regex are used to stop false inputs.
-    { 
-	 System.out.println("please enter a number ranging {1 - 5} ");
-	 response = sc.nextLine();
-    }
-   
-  System.out.println("\t\t\t\t\t\t your responce was submitted...Thank You");
-   }
-   */
    
    public void choice6(){
    System.out.println("\t\t\t\t\t\t info about previous versions & inprovements ");

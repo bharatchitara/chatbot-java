@@ -2,12 +2,16 @@
 package chatbot_test1;
 import java.util.*;
  
-class Secondinput {
-	   Scanner sc =new Scanner (System.in);
+public class Secondinput {
+	//   public static String name1 = null;
+//	   public static String email1 = null;
+	   String name =null;
+       String email= null;
+ 
+	Scanner sc =new Scanner (System.in);
 	 
         void secondinput() {
-         String name =null;
-   String movie =null;
+         String movie =null;
    String mtype1="action";
    String mtype2="sci-fi";
    String mtype3="romantic";
@@ -17,13 +21,29 @@ class Secondinput {
    System.out.println("\t\t\t\t\t\t what is your name");
    name =sc.nextLine();
    
-   if(name.isEmpty()){
-    System.out.println("\t\t\t\t\t\t no input detected");
+   
+   if(!name.matches("[a-zA-Z]+")){
+	   
+	   System.out.println("\t\t\t\t\t\t don't enter space , numbers & special char.");
     }
-    
+   else
+   {
+	//  name1 = name;
+   }
+   
+   System.out.println("\t\t\t\t\t\t please enter your email id");
+   email = sc.nextLine();
+   
+   if(email.isEmpty()){
+	    System.out.println("\t\t\t\t\t\t enter valid email like 'myname@domain.com'");
+	    }
+   
+   else{
+	  // email1 = email;
+	   
+   }
  try{                                                                                         //try - catch for timing delay
-        
-             Thread.sleep(1500);
+          Thread.sleep(1500);
              System.out.println("\t\t\t\t\t\t " + name +  " which kind of movies you like ");
              
     }
