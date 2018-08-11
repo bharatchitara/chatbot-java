@@ -1,6 +1,7 @@
 
 package chatbot_test1;
 import java.util.*;
+import java.lang.String;
 import javax.swing.JOptionPane;
 
 class thirdoption {

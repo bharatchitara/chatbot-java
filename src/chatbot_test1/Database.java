@@ -1,47 +1,53 @@
 package chatbot_test1;
 import java.util.*; 
 import java.sql.*;
+import java.lang.String;
 import chatbot_test1.Secondinput;
 
 
 public class Database extends Secondinput{
 	Scanner sc = new Scanner(System.in);
-	      
-	        void create(){
-	        	
+	static String response;
+   
+	 void create(){
+	   String resp;     	
+	 
 	   System.out.println("\t\t\t\t\t\t 5 star : excellent");
 	   System.out.println("\t\t\t\t\t\t 4 star : great");
 	   System.out.println("\t\t\t\t\t\t 3 star : good  ");
 	   System.out.println("\t\t\t\t\t\t 2 star : fair");
 	   System.out.println("\t\t\t\t\t\t 1 star : poor");
-	   System.out.println("\t\t\t\t\t\t enter your responce"); 
+	   System.out.println("\t\t\t\t\t\t enter your response"); 
 	   
-	   String response = sc.nextLine();
-	   while(!response.matches("[1-5]"))                                                     //regex are used to stop false inputs.
+	  resp = sc.nextLine();
+	   while(!resp.matches("[1-5]"))                                                     //regex are used to stop false inputs.
 	    { 
 		 System.out.println("please enter a number ranging {1 - 5} ");
-		 response = sc.nextLine();
+		 resp = sc.nextLine();
 	    }
 	   
-	  System.out.println("\t\t\t\t\t\t your responce was submitted...Thank You");
-
+	  System.out.println("\t\t\t\t\t\t your response was submitted...Thank You");
+	   response = resp;
 }   
    public static void main(String[] args){
-	   
-   try
+	
+       System.out.println(name_db);
+	    System.out.println(email_db);
+	     System.out.println(response);
+ 
+	  try
 	{
-	   Class.forName("com.mysql.jdbc.Driver");
+	   Class.forName("com.mysql.cj.jdbc.Driver");
 	Connection con=DriverManager.getConnection(  
 			"jdbc:mysql://localhost:3386/feedback","root","1234");
 	
 	Statement stmt =con.createStatement();
-	//ResultSet rs =stmt.executeQuery("select * from one;");
-	
-	String sql= "insert into one " + "values ('name1' , 'email1' , 'responce');";
-	stmt.executeQuery(sql);
-	
-	//while(rs.next())  
-		//System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));  
+   /*    name_db += name_db ;
+       email_db += email_db;
+	*/
+	String sql= "insert into one values ('"+name_db+"','"+email_db+"','"+response+"')";
+	stmt.executeUpdate(sql);
+ 	
 		con.close();  
 		}
 	
@@ -49,6 +55,4 @@ public class Database extends Secondinput{
 		System.out.println(e);
 	} 
 	}
-   
-   
-}
+    }

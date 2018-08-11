@@ -1,17 +1,18 @@
 
 package chatbot_test1;
 import java.util.*;
+import java.lang.String;
  
 public class Secondinput {
-	//   public static String name1 = null;
-//	   public static String email1 = null;
-	   String name =null;
+	   public static String name_db = null;
+	   public static String email_db= null;
+	   String name = null;
        String email= null;
  
 	Scanner sc =new Scanner (System.in);
 	 
         void secondinput() {
-         String movie =null;
+         String movie = null;
    String mtype1="action";
    String mtype2="sci-fi";
    String mtype3="romantic";
@@ -24,11 +25,11 @@ public class Secondinput {
    
    if(!name.matches("[a-zA-Z]+")){
 	   
-	   System.out.println("\t\t\t\t\t\t don't enter space , numbers & special char.");
+	   System.out.println("\t\t\t\t\t\t don't enter spaces , numbers & special char.");
     }
    else
    {
-	//  name1 = name;
+	  name_db = name;
    }
    
    System.out.println("\t\t\t\t\t\t please enter your email id");
@@ -39,7 +40,7 @@ public class Secondinput {
 	    }
    
    else{
-	  // email1 = email;
+	  email_db = email;
 	   
    }
  try{                                                                                         //try - catch for timing delay
@@ -79,7 +80,7 @@ public class Secondinput {
      Thread.sleep(1500);
  
        System.out.println("\t\t\t\t\t\t top 3 upcoming movies this year");
-             System.out.println("\t\t\t\t\t\t    * Ant man & the wasp");
+             System.out.println("\t\t\t\t\t\t    * Aqua man");
              System.out.println("\t\t\t\t\t\t    * Venom");
              System.out.println("\t\t\t\t\t\t    * Robot 2 ");
    }

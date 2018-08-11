@@ -6,6 +6,7 @@
 
 
 package chatbot_test1;
+
 //import chatbot_test1.Secondinput.*;
 //import chatbot_test1.thirdoption.*;
 //import chatbot_test1.Database.*;
@@ -14,6 +15,7 @@ import java.awt.Desktop;
 import java.awt.FlowLayout;
 import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
+import java.lang.String;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.*;
@@ -22,7 +24,6 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-
 
 interface Inputs{
  Scanner sc = new Scanner(System.in);
@@ -73,9 +74,7 @@ public void welcome(){
     System.out.println(e);
             }
     
-    
-    
-    if(str2.equals(str1) || str2.equals(str3) || str2.equals(str4) || str2.equals(str5)|| str2.equals(str6)|| str2.equals(str7)|| str2.equals(str8))
+        if(str2.equals(str1) || str2.equals(str3) || str2.equals(str4) || str2.equals(str5)|| str2.equals(str6)|| str2.equals(str7)|| str2.equals(str8))
     {
        System.out.println("\t\t\t\t\t\t hello !!! how are you......\n");
     }    
