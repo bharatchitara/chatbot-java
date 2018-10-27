@@ -1,0 +1,9 @@
+                                                 info about previous versions & inprovements 
+                                                 v1.0.0.1-- first chatbot code
+                                                 v1.0.0.2-- multithreading & multiple java files in a project 
+                                                 v1.0.0.3-- inproved input entries
+                                                 v1.0.0.4-- multi packages initailized
+                                                 v1.0.0.5-- more option added in movie & prog. lang. options
+                                                 v1.0.1.0-- code converted to use in linux also
+                                                 v1.0.1.1-- database added
+  

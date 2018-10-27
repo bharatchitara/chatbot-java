@@ -4,6 +4,7 @@ import java.util.*;
 import java.lang.String;
 import javax.swing.JOptionPane;
 
+
 class thirdoption {
     
     Scanner sc = new Scanner(System.in);
@@ -12,7 +13,8 @@ class thirdoption {
            Thread.sleep(1500);
        
      System.out.println("\t\t\t\t\t\t what is your favorite programming langage\n");
-     }
+     System.out.println("\t\t\t\t\t\t c \t c++ \t java \t python \t javascript");
+    }
      catch(InterruptedException e){
          System.out.println(e);
       }

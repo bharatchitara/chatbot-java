@@ -16,6 +16,7 @@ import java.awt.FlowLayout;
 import java.awt.image.BufferedImage;
 import javax.swing.JOptionPane;
 import java.lang.String;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
 import java.io.*;
@@ -34,9 +35,9 @@ interface Inputs{
     void choice2();
     void choice3();
     void choice4();
- //   void choice5();
+  //void choice5();
     void choice6();
-   //void choice7();
+  //void choice7();
   //void secondinput();
    }
 
@@ -174,13 +175,18 @@ public void welcome(){
    
    
    public void choice6(){
-   System.out.println("\t\t\t\t\t\t info about previous versions & inprovements ");
-   System.out.println("\t\t\t\t\t\t v1.0.0.1-- first chatbot code");
-   System.out.println("\t\t\t\t\t\t v1.0.0.2-- multithreading & multiple java files in a project ");
-   System.out.println("\t\t\t\t\t\t v1.0.0.3-- inproved input entries" );
-   System.out.println("\t\t\t\t\t\t v1.0.0.4-- multi packages initailized");
-   System.out.println("\t\t\t\t\t\t v1.0.0.5-- more option added in movie & prog. lang. options" );
-   System.out.println("\t\t\t\t\t\t v1.0.1.0-- code converted to use in linux also");
+   
+	   try{                     //file handling used..
+	    	FileReader fr=new FileReader("C:\\Users\\root\\Desktop\\chatbot_test1\\src\\version_info.txt");    
+         int i;    
+         while((i=fr.read())!=-1)    
+         System.out.print((char)i);    
+        fr.close();
+	    }
+	    catch(IOException e){
+	    	
+	    }
+   
    }
   // public void choice8(){
 
@@ -230,7 +236,7 @@ public class Chatbot_test1 {
         System.out.println("\t\t\t\t\t\t 2.open calculator");
         System.out.println("\t\t\t\t\t\t 3.open internet ");
         System.out.println("\t\t\t\t\t\t 4.about me");
-        System.out.println("\t\t\t\t\t\t 5.rate me  ");
+        System.out.println("\t\t\t\t\t\t 5.rate me ");
         System.out.println("\t\t\t\t\t\t 6.info about versions"); 
         System.out.println("\t\t\t\t\t\t press 0 to exit" );
         choice = sc.nextInt();
